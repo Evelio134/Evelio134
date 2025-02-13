@@ -4,7 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caples - Capacitación en LESCO</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background: #003366;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #f1f1f1;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,7 +83,7 @@
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <form>
+        <form id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" required>
 
@@ -52,67 +101,11 @@
         <p>&copy; 2025 Caples - Todos los derechos reservados</p>
     </footer>
 
-    <script src="script.js"></script>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-header {
-    background: #003366;
-    color: white;
-    padding: 15px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-}
-
-button {
-    background: #003366;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    background: #f1f1f1;
-    padding: 10px;
-    margin-top: 20px;
-}
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("¡Mensaje enviado! Nos pondremos en contacto pronto.");
-});
-
-
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("¡Mensaje enviado! Nos pondremos en contacto pronto.");
+        });
+    </script>
+</body>
+</html>
